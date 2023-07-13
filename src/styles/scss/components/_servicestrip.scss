@@ -1,0 +1,47 @@
+.Services-Container {
+    color: var(--letter-color);
+    display: grid;
+    gap: 2rem;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color2);
+    grid-template-columns: repeat(1);
+    @include rwd(l){
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.service-item {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    gap: 1em;
+    flex-direction: row;
+    background-color: var(--bg-color);
+    border-radius: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    transition: transform .3s;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.service-item img{
+    height: 5rem;
+}
+
+.service-item-content {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    & p {
+        margin: 0;
+    }
+}

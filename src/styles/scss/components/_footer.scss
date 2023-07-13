@@ -1,0 +1,35 @@
+.footer {
+    color: var(--letter-color);
+    background-color: var(--bg-color);
+    padding: 1.2rem;
+    text-align: center;
+  }
+  
+  .social-media {
+    margin-bottom: 0.8rem;
+  }
+  
+  .social-media a {
+    display: inline-block;
+    margin-right: 0.8rem;
+    font-size: 20px;
+    color: var(--letter-color);
+    transition: color 0.3s;
+  }
+  
+  .social-media a:hover {
+    color: var(--button-color);
+  }
+  
+  .created-by {
+    margin-bottom: 0.8rem;
+  }
+  
+  .inspiring-message {
+    margin-bottom: 0.8rem;
+  }
+  
+  .contact-info {
+    font-size: 1rem;
+  }
+  

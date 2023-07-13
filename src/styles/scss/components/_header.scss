@@ -1,0 +1,10 @@
+.main-header {
+    overflow: hidden;
+    display: flex;
+    height: $header-height;
+    width: 100%;
+    background-color: var(--bg-color);
+    justify-content: space-between;
+    box-shadow: -5px -5px .7em var(--button-color);
+    z-index: 10;
+}

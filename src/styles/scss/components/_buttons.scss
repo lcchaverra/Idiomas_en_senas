@@ -1,0 +1,30 @@
+.btn {
+    text-align: center;
+    align-items: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 3.5em;
+    padding-right: 3.5em;
+    margin: .5em; 
+    border-radius: .3em;
+    border: none;
+    background-color: var(--primary);
+    color: var(--button-color);
+    will-change: filter background-color;
+    transition: filter .3s, background-color .3s;
+    font-family: 'Nunito-Black', sans-serif;
+    &:hover{
+        background-color: var(--bg-color);
+        filter: drop-shadow(0 0 .2em $border-color);
+        outline: .1em solid var(--button-color);
+    }
+}
+
+.secundary {
+    background-color: var(--bg-color);
+    outline: .1em solid var(--button-color);
+    &:hover {
+        color: var(--bg-color);
+        background-color: var(--button-color);
+    }
+}

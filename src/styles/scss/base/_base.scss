@@ -1,0 +1,55 @@
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+
+// Fuente para titulos
+@font-face {
+    font-family: 'Ichiji';
+    src: url('src/assets/Ichiji-Two.otf');
+}
+
+// Fuente para Subtitulos
+@font-face {
+    font-family: 'Nunito-Black';
+    src: url('src/assets/Nunito-Black.ttf');
+}
+
+// Fuente para Texto general
+@font-face {
+    font-family: 'Nunito-Light';
+    src: url('src/assets/Nunito-Light.ttf');
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family:'Nunito-Light', sans-serif;
+    font-size: var(--body-font-size);
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Ichiji', sans-serif;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+}
+
+h2 {
+    font-size: var(--h2-font-size);
+}
+
+h3 {
+    font-size: var(--h3-font-size);
+}
