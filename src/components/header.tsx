@@ -1,7 +1,17 @@
 import Menu from "./menu";
 import Logo from "/src/assets/Logomenu2.svg";
+import { useRef } from 'react';
 
 const header = () => {
+
+  const mainNavRef = useRef<HTMLElement | null>(null);
+
+  const handleMenuToggle = () => {
+    if (mainNavRef.current) {
+      mainNavRef.current.classList.toggle('show');
+    }
+  };
+
   return (
     <>
       <header className="main-header">
@@ -14,12 +24,10 @@ const header = () => {
         {/* Menu Hamburguesa */}
         <div
           className="main-menu-toggle"
-          onClick={() =>
-            document.getElementById("main-nav").classList.toggle("show")
-          }
+          onClick={handleMenuToggle}
         ></div>
         {/* Componente del menu */}
-        <Menu />
+        <Menu mainNavRef={mainNavRef} />
       </header>
     </>
   );

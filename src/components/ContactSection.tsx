@@ -1,36 +1,41 @@
 import LogoSiluet from '/src/assets/logo.svg';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+import { useEffect, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const ContactSection = () => {
-  (function () {
-    emailjs.init("user_NbWHHoXNBSbJSJeC7s6uJ");
-  })();
 
-  window.onload = function () {
-    document
-      .getElementById("ContactoID")
-      .addEventListener("submit", function (event) {
-        event.preventDefault();
-        emailjs.sendForm("11932238243234854645", "template_d6p2mt7", this).then(
-          function () {
-            console.log("se envió");
-            Swal.fire({
-              icon: 'success',
-              title: 'Registro Exitoso...',
-              text: 'Se envió correctamente su formulario, nos pondremos en contacto',
-              showConfirmButton: true,
-            })
-          },
-          function (error) {
-            console.log("no se envió");
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'no se pudo enviar el formulario, por favor intentelo de nuevo',
-                showConfirmButton: true,
-            })
-          }
-        );
-      });
+  const formRef = useRef(null);
+
+  useEffect(() => {
+    emailjs.init("user_NbWHHoXNBSbJSJeC7s6uJ");
+  }, []);
+
+  const handleSubmit = (event:any) => {
+    event.preventDefault();
+
+    if (formRef.current) {
+      emailjs.sendForm("11932238243234854645", "template_d6p2mt7", formRef.current)
+        .then(function () {
+          console.log("se envió");
+          Swal.fire({
+            icon: 'success',
+            title: 'Registro Exitoso...',
+            text: 'Se envió correctamente su formulario, nos pondremos en contacto',
+            showConfirmButton: true,
+          });
+        })
+        .catch(function (error) {
+          console.log("no se envió");
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'No se pudo enviar el formulario, por favor inténtelo de nuevo',
+            showConfirmButton: true,
+          });
+        });
+    }
   };
 
   return (
@@ -42,7 +47,7 @@ const ContactSection = () => {
           (Gmail)
         </p>
 
-        <form id="ContactoID" className="contact-form">
+        <form ref={formRef} className="contact-form" onSubmit={handleSubmit}>
           <img className="contact-logo" src={LogoSiluet} alt="Logo de idiomas en señas para la sesion de contacto" />
           <div className="form-group">
             <label htmlFor="nombre_usuario">Ingresa tu nombre</label>
@@ -81,3 +86,4 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
+

@@ -1,11 +1,13 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
-const menu = () => {
+const menu = ({mainNavRef}:any) => {
 
     const scrollToSection = (event:any, sectionId:any) => {
       event.preventDefault();
       const section = document.getElementById(sectionId);
-      section.scrollIntoView({ behavior: 'smooth' });
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
     };
 
   return (
