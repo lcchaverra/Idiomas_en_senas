@@ -8,12 +8,9 @@ const MainBanner = () => {
       <div className="Banner" id="ini">
         <div className="Banner-content">
           <div className="Banner-Primary-content">
-            <h3>HOLA SOY UN TITULO DE PRUEBA</h3>
+            <h3>Idiomas en Senas</h3>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Reiciendis aut obcaecati, quis, pariatur eos rem optio mollitia
-              incidunt laudantium sunt porro aspernatur ex quos laborum fugit
-              molestias quo saepe reprehenderit.
+            Somos una comunidad interesada en aprender y promocionar la Lengua de señas en Colombia, que se conecta a través de una plataforma digital.
             </p>
             <div className="button-groud">
               <button className="btn">Botón 1</button>
