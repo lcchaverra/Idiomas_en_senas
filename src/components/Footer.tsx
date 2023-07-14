@@ -25,7 +25,6 @@ const Footer = () => {
     </div>
     <div className="inspiring-message">
       <p>"Hablando con los hechos, construyendo una causa ♡"
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sit vero quae? Saepe officiis architecto optio adipisci quos. Laborum, nobis incidunt dolores asperiores dolorem sed id facere dicta. Vel, error?
       </p>
     </div>
     <div className="contact-info">
