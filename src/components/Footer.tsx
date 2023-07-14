@@ -24,7 +24,9 @@ const Footer = () => {
       <p>Desarrollado por Luis Carlos Chaverra Córdoba</p>
     </div>
     <div className="inspiring-message">
-      <p>"Hablando con los hechos, construyendo una causa ♡"</p>
+      <p>"Hablando con los hechos, construyendo una causa ♡"
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sit vero quae? Saepe officiis architecto optio adipisci quos. Laborum, nobis incidunt dolores asperiores dolorem sed id facere dicta. Vel, error?
+      </p>
     </div>
     <div className="contact-info">
       <p>Contacto: lucas.cordoba1510@gmail.com</p>
