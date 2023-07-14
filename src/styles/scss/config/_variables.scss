@@ -18,6 +18,7 @@ $breakpoints: (
     --letter-color: #000000f5;
     --bg-color:#FFFF;
     --bg-color2: #F6F9FC;
+    --rounded-element: #F3F5F9;
     background-color: var(--bg-color);
     // Z-index - Variables de apilamientos
     --z-back: -10;
@@ -49,6 +50,7 @@ $breakpoints: (
         --letter-color: #FFFF;
         --bg-color2  : #23272E;
         --bg-color    : #272e39;
+        --rounded-element: #232932;
     } 
     .main-logo img{
         filter:invert(1);
