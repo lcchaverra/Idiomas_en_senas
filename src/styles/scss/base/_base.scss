@@ -1,55 +1,71 @@
-*,*::before,*::after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+//Fuente para titulos
+// @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
 
+// En local
 // Fuente para titulos
 @font-face {
     font-family: 'Ichiji';
-    src: url('src/assets/Ichiji-Two.otf');
-}
-
-// Fuente para Subtitulos
-@font-face {
-    font-family: 'Nunito-Black';
-    src: url('src/assets/Nunito-Black.ttf');
+    src: url('src/assets/fonts/Ichiji-Two.otf') format('OpenType');
 }
 
 // Fuente para Texto general
 @font-face {
-    font-family: 'Nunito-Light';
-    src: url('src/assets/Nunito-Light.ttf');
+    font-family: 'Nunito';
+    src: url('src/assets/fonts/Nunito-Light.ttf') format('TrueType');
 }
 
+// En produccion
+// @font-face {
+//   font-family: "Ichiji";
+//   src: url("/assets/fonts/Ichiji-Two.otf") format("opentype");
+// }
+
+// @font-face {
+//   font-family: "Nunito";
+//   src: url("/assets/fonts/Nunito-Light.ttf") format("truetype");
+// }
+
 body {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    font-family:'Nunito-Light', sans-serif;
-    font-size: var(--body-font-size);
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  // font-family:'Nunito-Light', sans-serif;
+  font-family: "Nunito", sans-serif;
+  font-size: var(--body-font-size);
+  min-height: 100vh;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Ichiji', sans-serif;
-    margin-top: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Ichiji", sans-serif;
+  margin-top: 0;
 }
 
 h1 {
-    font-size: var(--h1-font-size);
+  font-size: var(--h1-font-size);
 }
 
 h2 {
-    font-size: var(--h2-font-size);
+  font-size: var(--h2-font-size);
 }
 
 h3 {
-    font-size: var(--h3-font-size);
+  font-size: var(--h3-font-size);
 }

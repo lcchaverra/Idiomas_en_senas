@@ -12,7 +12,7 @@
     color: var(--button-color);
     will-change: filter background-color;
     transition: filter .3s, background-color .3s;
-    font-family: 'Nunito-Black', sans-serif;
+    font-family: 'Nunito', sans-serif;
     &:hover{
         background-color: var(--bg-color);
         filter: drop-shadow(0 0 .2em $border-color);
