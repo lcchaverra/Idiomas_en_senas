@@ -1,15 +1,13 @@
 import Menu from "./menu";
 import Logo from "/src/assets/Logomenu2.svg";
-import { useRef } from 'react';
+import { useState } from 'react';
 
 const header = () => {
-
-  const mainNavRef = useRef<HTMLElement | null>(null);
+  
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
   const handleMenuToggle = () => {
-    if (mainNavRef.current) {
-      mainNavRef.current.classList.toggle('show');
-    }
+    setMenuOpen(!isMenuOpen);
   };
 
   return (
@@ -23,11 +21,11 @@ const header = () => {
 
         {/* Menu Hamburguesa */}
         <div
-          className="main-menu-toggle"
+          className={`main-menu-toggle ${isMenuOpen ? 'show' : ''}`}
           onClick={handleMenuToggle}
         ></div>
         {/* Componente del menu */}
-        <Menu mainNavRef={mainNavRef} />
+        <Menu isMenuOpen={isMenuOpen} />
       </header>
     </>
   );

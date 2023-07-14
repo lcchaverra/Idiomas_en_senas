@@ -149,7 +149,7 @@ h3 {
 
 .main-menu__link {
   margin-left: 1rem;
-  color: var(--bg-color);
+  color: white;
 }
 @media screen and (min-width: 960px) {
   .main-menu__link {
