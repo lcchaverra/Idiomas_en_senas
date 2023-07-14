@@ -8,10 +8,13 @@ const ImageSections = () => {
       <div className="gallery-container" id="gallery">
         <h3 className="">Galeria de Imagenes</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam minus
-          accusamus assumenda consectetur asperiores ipsa. Ratione omnis
-          blanditiis, suscipit quidem ut qui, deleniti earum delectus aliquam
-          optio magnam dolore? Quaerat.
+          Estos son los rostros de personas sordas y oyentes que anhelan
+          oportunidades, anhelan inclusión y quieren aprender a comunicarse en
+          la Lengua de Señas. Idiomas en Señas es la catapulta para que puedan
+          aprender a comunicarse en su propia lengua nativa, aportar al
+          crecimiento y desarrollo de su comunidad, departamento y el mundo. Mi
+          Taller en Señas fue un espacio en el que pudieron expresar sus
+          pensamientos y su más profundo sentir.
         </p>
         <Carusel />
         {/* Imagenes de Fondo */}

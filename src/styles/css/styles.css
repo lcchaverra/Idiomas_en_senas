@@ -341,8 +341,7 @@ h3 {
   flex-direction: row;
   background-color: var(--bg-color);
   border-radius: 1em;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding: 2em 1em;
   transition: transform 0.3s;
 }
 .service-item:hover {

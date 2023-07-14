@@ -13,8 +13,8 @@ const MainBanner = () => {
             Somos una comunidad interesada en aprender y promocionar la Lengua de señas en Colombia, que se conecta a través de una plataforma digital.
             </p>
             <div className="button-groud">
-              <button className="btn">Botón 1</button>
-              <button className="btn secundary">Botón 2</button>
+              <button className="btn">¡Unetenos!</button>
+              <button className="btn secundary">Contactanos</button>
             </div>
           </div>
           <div className="image-container">

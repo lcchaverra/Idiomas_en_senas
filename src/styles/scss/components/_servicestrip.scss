@@ -24,8 +24,7 @@
     flex-direction: row;
     background-color: var(--bg-color);
     border-radius: 1em;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding: 2em 1em;
     transition: transform .3s;
     &:hover {
         transform: scale(1.1);

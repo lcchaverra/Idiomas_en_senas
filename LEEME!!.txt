@@ -1,0 +1,7 @@
+Link de la pagina en un hosting:
+https://idiomas-en-senas.netlify.app/
+
+Nota: el proyecto está realizado en react, 
+para poder correrlo en local toca usar el comando "npm run dev", 
+o en su efecto solo necesitas la carpeta "Dist" que contiene la pagina ya compilada, 
+caso tal se dificulten estas opciones dejo la pagina en un hosting para que se pueda visualizar
