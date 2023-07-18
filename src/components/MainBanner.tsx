@@ -8,7 +8,7 @@ const MainBanner = () => {
       <div className="Banner" id="ini">
         <div className="Banner-content">
           <div className="Banner-Primary-content">
-            <h3>Idiomas en Senas</h3>
+            <h3>Idiomas en Señas</h3>
             <p>
             Somos una comunidad interesada en aprender y promocionar la Lengua de señas en Colombia, que se conecta a través de una plataforma digital.
             </p>
