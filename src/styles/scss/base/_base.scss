@@ -3,8 +3,6 @@
 *::after {
   box-sizing: border-box;
 }
-//Fuente para titulos
-// @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
 
 // En local
 // Fuente para titulos
@@ -19,22 +17,10 @@
     src: url('src/assets/fonts/Nunito-Light.ttf') format('TrueType');
 }
 
-// En produccion
-// @font-face {
-//   font-family: "Ichiji";
-//   src: url("/assets/fonts/Ichiji-Two.otf") format("opentype");
-// }
-
-// @font-face {
-//   font-family: "Nunito";
-//   src: url("/assets/fonts/Nunito-Light.ttf") format("truetype");
-// }
-
 body {
   display: flex;
   flex-direction: column;
   margin: 0;
-  // font-family:'Nunito-Light', sans-serif;
   font-family: "Nunito", sans-serif;
   font-size: var(--body-font-size);
   min-height: 100vh;
