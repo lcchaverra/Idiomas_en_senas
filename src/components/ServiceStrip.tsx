@@ -5,18 +5,21 @@ import Icon3 from "/src/assets/icons/bulbo.png";
 
 const servicios = [
   {
+    id: 1,
     enlace: Icon1,
     alt: "Servicio  1",
     servicio: "Aportamos",
     descripcion: "Procesos realmente enriquecedores que le aportaron mucho a nuestro crecimiento para generar inclusión educativa, social y laboral.",
   },
   {
+    id: 2,
     enlace: Icon2,
     alt: "Servicio numero 2",
     servicio: "Somos",
     descripcion: "Idiomas en Señas es inclusión, es educación y es Innovación.",
   },
   {
+    id: 3,
     enlace: Icon3,
     alt: "Servicio numero 3",
     servicio: "Nos visionamos",
@@ -29,7 +32,8 @@ const ServiceStrip = () => {
     <>
       <div className="Services-Container">
         {servicios.map((servicio) => (
-          <Service
+          <Service 
+            key= {servicio.id}
             enlace={servicio.enlace}
             alt={servicio.alt}
             servicio={servicio.servicio}

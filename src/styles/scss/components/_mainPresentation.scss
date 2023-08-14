@@ -1,0 +1,60 @@
+.who-we-are {
+    position: relative;
+    text-align: center;
+    color: var(--letter-color);
+    padding-top: 5em;
+    padding-bottom: 5em;
+    padding-left: 2em;
+    padding-right: 2em;
+    border-bottom: 3px solid var(--bg-color2);
+    @include rwd(l){        
+        padding-left: 8em;
+        padding-right: 8em;
+        padding-top: 7em;
+        padding-bottom: 7em;
+    }
+    & p {
+        text-align: justify;
+    }
+    & .Banner-backgroud {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40%;
+        z-index: -1;
+        opacity: 0.3;
+    }
+}
+
+.mision-vision-container {
+    padding-top: 3rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(1 , 1fr);
+    @include rwd(l) {
+        grid-template-columns: repeat(2 , 1fr);
+    }
+}
+
+.mision-vision-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    & img {
+        margin-right: 1rem;
+        width: 3rem;
+    }
+}
+
+.mision, .vision {
+    padding: .7rem;
+    border: 3px dashed var(--bg-color2);
+    border-radius: 1rem;
+    background-color: var(--bg-color);
+    transition: transform .3s;
+
+    &:hover {
+        transform: translateY(-1rem);
+    }
+}

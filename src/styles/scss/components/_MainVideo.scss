@@ -1,0 +1,10 @@
+.video-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    & video {
+        width: 100%;
+    }
+}

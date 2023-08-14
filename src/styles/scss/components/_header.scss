@@ -6,5 +6,6 @@
     background-color: var(--bg-color);
     justify-content: space-between;
     box-shadow: -5px -5px .7em var(--button-color);
-    z-index: 10;
+    z-index: 100;
+    position: fixed;
 }

@@ -5,7 +5,7 @@ import BackOrangeBlue from "/src/assets/Recurso_imagen.png";
 const MainBanner = () => {
   return (
     <>
-      <div className="Banner" id="ini">
+      <div className="Banner">
         <div className="Banner-content">
           <div className="Banner-Primary-content">
             <h3>Idiomas en Señas</h3>

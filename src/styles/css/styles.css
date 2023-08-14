@@ -80,7 +80,6 @@ h4,
 h5,
 h6 {
   font-family: "Ichiji", sans-serif;
-  margin-top: 0;
 }
 
 h1 {
@@ -127,7 +126,8 @@ h3 {
   background-color: var(--bg-color);
   justify-content: space-between;
   box-shadow: -5px -5px 0.7em var(--button-color);
-  z-index: 10;
+  z-index: 100;
+  position: fixed;
 }
 
 .main-menu {
@@ -314,6 +314,81 @@ h3 {
   object-fit: fill;
   z-index: 10;
   border-radius: 1.4em;
+}
+
+.video-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+}
+.video-container video {
+  width: 100%;
+}
+
+.who-we-are {
+  position: relative;
+  text-align: center;
+  color: var(--letter-color);
+  padding-top: 5em;
+  padding-bottom: 5em;
+  padding-left: 2em;
+  padding-right: 2em;
+  border-bottom: 3px solid var(--bg-color2);
+}
+@media screen and (min-width: 960px) {
+  .who-we-are {
+    padding-left: 8em;
+    padding-right: 8em;
+    padding-top: 7em;
+    padding-bottom: 7em;
+  }
+}
+.who-we-are p {
+  text-align: justify;
+}
+.who-we-are .Banner-backgroud {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40%;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.mision-vision-container {
+  padding-top: 3rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media screen and (min-width: 960px) {
+  .mision-vision-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.mision-vision-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.mision-vision-title img {
+  margin-right: 1rem;
+  width: 3rem;
+}
+
+.mision, .vision {
+  padding: 0.7rem;
+  border: 3px dashed var(--bg-color2);
+  border-radius: 1rem;
+  background-color: var(--bg-color);
+  transition: transform 0.3s;
+}
+.mision:hover, .vision:hover {
+  transform: translateY(-1rem);
 }
 
 .Services-Container {

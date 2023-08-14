@@ -10,21 +10,12 @@ const Footer = () => {
       <a href="https://www.instagram.com/idiomas_en_senas/?igshid=ZDc4ODBmNjlmNQ" target="_blank" rel="noopener noreferrer">
         <FaInstagram />
       </a>
-      {/* <a href="https://www.twitter.com/tu_pagina" target="_blank" rel="noopener noreferrer">
-        <FaTwitter />
-      </a>
-      <a href="https://www.youtube.com/tu_canal" target="_blank" rel="noopener noreferrer">
-        <FaYoutube />
-      </a>
-      <a href="https://www.linkedin.com/tu_perfil" target="_blank" rel="noopener noreferrer">
-        <FaLinkedin />
-      </a> */}
     </div>
     <div className="created-by">
-      <p>Desarrollado por Luis Carlos Chaverra Córdoba</p>
+      <p>Desarrollado por  <strong>: Luis Carlos Chaverra Córdoba </strong> </p>
     </div>
     <div className="inspiring-message">
-      <p>"Hablando con los hechos, construyendo una causa ♡"
+      <p>"Un paso mas cerca a la inclusión social"
       </p>
     </div>
     <div className="contact-info">
