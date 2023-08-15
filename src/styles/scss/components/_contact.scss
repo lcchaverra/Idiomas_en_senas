@@ -17,7 +17,7 @@
     border-radius: 5%;
     width: 100%;
     @include rwd(l){
-        width: 50%;
+        width: 60%;
         padding: 5rem;
     }
 }
@@ -39,6 +39,7 @@
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    resize: none;
   }
   
   .form-group-btn {
@@ -51,3 +52,9 @@
     width: 100%;
     cursor: pointer;
   }  
+
+  .form-group select {
+    width: 100%;
+    padding: .5rem;
+    border-radius: .3rem;
+  }
