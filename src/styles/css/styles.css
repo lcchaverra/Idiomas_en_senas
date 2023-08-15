@@ -121,7 +121,7 @@ h3 {
 .main-header {
   overflow: hidden;
   display: flex;
-  height: 4rem;
+  height: 4.5rem;
   width: 100%;
   background-color: var(--bg-color);
   justify-content: space-between;
@@ -173,10 +173,10 @@ h3 {
 
 .main-nav {
   position: fixed;
-  height: calc(100vh - 4rem);
+  height: calc(100vh - 4.5rem);
   width: 80vw;
   background-color: var(--primary);
-  top: 4rem;
+  top: 4.5rem;
   right: -80vw;
   transition: all 0.3s;
   z-index: var(--z-fixed);
@@ -317,6 +317,7 @@ h3 {
 }
 
 .video-container {
+  margin-top: 4rem;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -636,7 +637,7 @@ h3 {
 }
 @media screen and (min-width: 960px) {
   .contact-form {
-    width: 50%;
+    width: 60%;
     padding: 5rem;
   }
 }
@@ -658,6 +659,7 @@ h3 {
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  resize: none;
 }
 
 .form-group-btn {
@@ -669,6 +671,12 @@ h3 {
 .form-group-btn button {
   width: 100%;
   cursor: pointer;
+}
+
+.form-group select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
 }
 
 .footer {
