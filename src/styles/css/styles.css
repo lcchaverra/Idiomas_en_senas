@@ -322,7 +322,6 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: aqua;
 }
 .video-container video {
   width: 100%;
