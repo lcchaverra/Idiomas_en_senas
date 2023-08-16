@@ -1,5 +1,6 @@
 import Menu from "./menu";
-import Logo from "/src/assets/Logo.svg";
+// import Logo from "/src/assets/Logo.svg";
+import Logo from "/src/assets/Logomenu2.svg";
 import { useState } from 'react';
 
 const header = () => {
