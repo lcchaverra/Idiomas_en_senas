@@ -126,7 +126,7 @@ h3 {
   background-color: var(--bg-color);
   justify-content: space-between;
   box-shadow: -5px -5px 0.7em var(--button-color);
-  z-index: 100;
+  z-index: 10;
   position: fixed;
 }
 
@@ -240,6 +240,50 @@ h3 {
   background-color: var(--button-color);
 }
 
+.assistant-container {
+  right: 0;
+  position: fixed;
+  z-index: 11;
+  bottom: 1vh;
+}
+
+.virtual-assistant {
+  width: 5rem;
+  background-color: var(--primary);
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.virtual-logo img {
+  filter: invert(1);
+}
+
+.virtual-modal {
+  display: none;
+  bottom: 12vh;
+  right: 0%;
+  position: absolute;
+  background-color: var(--primary);
+  padding: 1rem;
+  width: 15em;
+  text-align: center;
+  color: white;
+  border-radius: 1.2rem;
+  z-index: 10;
+}
+@media screen and (min-width: 960px) {
+  .virtual-modal {
+    width: 20em;
+    overflow: hidden;
+    bottom: 0;
+    right: 100%;
+  }
+}
+
+.show {
+  display: block;
+}
+
 .Banner {
   position: relative;
   display: flex;
@@ -317,7 +361,7 @@ h3 {
 }
 
 .video-container {
-  margin-top: 4rem;
+  margin-top: 4.5rem;
   width: 100%;
   display: flex;
   justify-content: center;

@@ -1,0 +1,44 @@
+.assistant-container {
+    right: 0;
+    position: fixed;
+    z-index: 11;
+    bottom: 1vh;
+}
+
+.virtual-assistant {
+    width: 5rem;
+    background-color: var(--primary);
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.virtual-logo {
+    & img {
+        filter: invert(1);
+    }
+}
+
+.virtual-modal {
+    display: none;
+    bottom: 12vh;
+    right: 0%;
+    position: absolute;
+    background-color: var(--primary);
+    padding: 1rem;
+    width: 15em;
+    text-align: center;
+    color: #FFFF;
+    border-radius: 1.2rem;
+    z-index: 10;
+
+    @include rwd(l){
+        width: 20em;
+        overflow: hidden;
+        bottom: 0;
+        right: 100%;
+    }
+    
+}
+.show {
+    display: block;
+}

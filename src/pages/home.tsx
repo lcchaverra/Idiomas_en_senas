@@ -7,11 +7,13 @@ import Activities from "../components/Activities"
 import ImageSections from "../components/ImageSections"
 import ContactSection from "../components/ContactSection"
 import Footer from "../components/Footer"
+import Assistant from "../components/Assistant"
 
 const home = () => {
   return (
     <>
     <Header />
+    <Assistant />
     {/* <MainBanner /> */}
     <MainVideo />
     <MainPresentationText/>
