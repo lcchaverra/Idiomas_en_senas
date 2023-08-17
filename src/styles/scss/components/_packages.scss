@@ -1,0 +1,60 @@
+.packages-container {
+    color: var(--letter-color);
+    background-color: var(--bg-color2);
+    width: 100%;
+    padding: 2rem;
+    text-align: justify;
+    border-bottom: 3px solid var(--bg-color);
+    @include rwd(l) {
+        padding: 5rem 8rem;
+    }
+    & h2, h3, h4 {
+        margin-top: 2rem;
+        text-align: center;
+    }
+}
+
+.packages-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+    @include rwd(l) {
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+}
+
+.packages-gif-container {
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.packages-gif-container img {
+    width: 80%;
+    border-radius: 3rem;
+}
+
+.cloud-item {
+    width: 100%;
+    position: relative;
+    & li {
+        list-style: none;
+        background-color: var(--bg-color);
+        border-radius: 2rem;
+        box-shadow: 3px 3px 3px $border-color;
+        position: relative;
+        padding: 2rem;
+        margin-top: 1rem;
+        z-index: 3;
+    }
+
+    & img {
+        filter: var(--bg-color2);
+        position: absolute;
+        bottom: -2.7rem;
+        left: 0;
+        z-index: 1;
+    }
+}

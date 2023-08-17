@@ -1,5 +1,6 @@
 import Menu from "./menu";
 import Logo from "/src/assets/Logomenu2.svg";
+import LogoNuevo from "/src/assets/icons/logo.svg";
 import { useState } from 'react';
 
 const header = () => {
@@ -15,7 +16,7 @@ const header = () => {
       <header className="main-header">
         <div className="main-logo">
           <a href="/">
-            <img src={Logo} alt="Logo de Idiomas en Señas" />
+            <img src={LogoNuevo} alt="Logo de Idiomas en Señas" />
           </a>
         </div>
 
