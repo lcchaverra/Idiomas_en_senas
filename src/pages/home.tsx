@@ -3,6 +3,7 @@ import MainBanner from "../components/MainBanner"
 import MainVideo from "../components/MainVideo"
 import MainPresentationText from "../components/MainPresentationText"
 import ServiceStrip from "../components/ServiceStrip"
+import NewServices from "../components/NewServices"
 import Activities from "../components/Activities"
 import MultiuserPackages from "../components/MultiuserPackages"
 import ImageSections from "../components/ImageSections"
@@ -19,6 +20,7 @@ const home = () => {
     <MainVideo />
     <MainPresentationText/>
     <ServiceStrip />
+    <NewServices />
     {/* <Activities/> */}
     <ImageSections/>
     <MultiuserPackages />
