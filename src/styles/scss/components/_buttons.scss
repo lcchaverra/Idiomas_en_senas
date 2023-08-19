@@ -17,6 +17,7 @@
         background-color: var(--bg-color);
         filter: drop-shadow(0 0 .2em $border-color);
         outline: .1em solid var(--button-color);
+        cursor: pointer;
     }
 }
 
@@ -26,5 +27,6 @@
     &:hover {
         color: var(--bg-color);
         background-color: var(--button-color);
+        cursor: pointer;
     }
 }

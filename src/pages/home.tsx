@@ -19,7 +19,7 @@ const home = () => {
     {/* <MainBanner /> */}
     <MainVideo />
     <MainPresentationText/>
-    <ServiceStrip />
+    {/* <ServiceStrip /> */}
     <NewServices />
     {/* <Activities/> */}
     <ImageSections/>

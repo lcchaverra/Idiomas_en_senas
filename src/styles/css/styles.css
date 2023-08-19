@@ -221,6 +221,7 @@ h3 {
   background-color: var(--bg-color);
   filter: drop-shadow(0 0 0.2em #CCC);
   outline: 0.1em solid var(--button-color);
+  cursor: pointer;
 }
 
 .secundary {
@@ -230,6 +231,7 @@ h3 {
 .secundary:hover {
   color: var(--bg-color);
   background-color: var(--button-color);
+  cursor: pointer;
 }
 
 .assistant-container {
@@ -475,13 +477,13 @@ h3 {
 
 .New-services-section {
   color: var(--letter-color);
-  padding: 2rem;
-  margin-top: 1rem;
+  background-color: var(--bg-color2);
+  padding: 2.7rem;
   margin-bottom: 0.7rem;
 }
 @media screen and (min-width: 960px) {
   .New-services-section {
-    padding: 4rem;
+    padding: 4rem 8rem;
   }
 }
 .New-services-section h2 {
@@ -497,7 +499,8 @@ h3 {
   padding: 2em 2.5em;
   justify-content: center;
   align-items: center;
-  background-color: var(--bg-color2);
+  background-color: var(--bg-color);
+  border-radius: 1.7rem;
   grid-template-columns: repeat(1, 1fr);
 }
 @media screen and (min-width: 960px) {
@@ -506,35 +509,39 @@ h3 {
   }
 }
 
-.new-services-item {
-  border: 3px solid wheat;
-  background-color: red;
-}
 .new-services-item h3 {
   text-align: center;
 }
 
-/* styles.css */
-/* Estilos para el componente GifCourseComponent */
 .gif-course-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 1rem;
 }
 
 .gif {
   max-width: 100%;
   cursor: pointer;
+  transition: transform 0.3s;
+  border-radius: 1rem;
+}
+.gif:hover {
+  transform: scale(1.1);
 }
 
 .course-level {
-  margin-top: 10px;
+  outline: 2px dashed var(--bg-color2);
+  border-radius: 0.8rem;
+  margin-top: 0.8rem;
   cursor: pointer;
-  color: blue;
+  color: var(--letter-color);
+  transition: transform 0.3s;
+}
+.course-level:hover {
+  transform: scale(1.1);
 }
 
-/* Estilos para el componente Modal */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -549,23 +556,13 @@ h3 {
 }
 
 .modal-content {
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
+  background-color: var(--bg-color);
+  padding: 2rem;
+  border-radius: 0.5rem;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   max-width: 80%;
   text-align: center;
-  color: #3498db;
-}
-
-.modal-close {
-  margin-top: 10px;
-  padding: 5px 10px;
-  border: none;
-  background-color: #3498db;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
+  color: var(--letter-color);
 }
 
 .activities-container {
