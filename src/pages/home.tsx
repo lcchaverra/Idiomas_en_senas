@@ -4,6 +4,7 @@ import MainVideo from "../components/MainVideo"
 import MainPresentationText from "../components/MainPresentationText"
 import ServiceStrip from "../components/ServiceStrip"
 import NewServices from "../components/NewServices"
+import Interests from "../components/Interests"
 import Activities from "../components/Activities"
 import MultiuserPackages from "../components/MultiuserPackages"
 import ImageSections from "../components/ImageSections"
@@ -16,12 +17,10 @@ const home = () => {
     <>
     <Header />
     <Assistant />
-    {/* <MainBanner /> */}
     <MainVideo />
     <MainPresentationText/>
-    {/* <ServiceStrip /> */}
     <NewServices />
-    {/* <Activities/> */}
+    <Interests />
     <ImageSections/>
     <MultiuserPackages />
     <ContactSection/>

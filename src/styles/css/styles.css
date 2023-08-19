@@ -565,6 +565,17 @@ h3 {
   color: var(--letter-color);
 }
 
+.interest-container {
+  background-color: bisque;
+  text-align: center;
+  padding: 2rem;
+}
+@media screen and (min-width: 960px) {
+  .interest-container {
+    padding: 2rem 8rem;
+  }
+}
+
 .activities-container {
   text-align: center;
   color: var(--letter-color);

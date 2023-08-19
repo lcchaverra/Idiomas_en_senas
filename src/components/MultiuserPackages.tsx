@@ -6,12 +6,6 @@ const MultiuserPackages = () => {
     <>
       <div className="packages-container">
         <h2>Paquetes Multiusuarios</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa dolores
-          temporibus ipsa error, dolore nam quidem illum odit maiores autem qui
-          laborum, aspernatur corporis tempore assumenda! Quo quod consequuntur
-          rerum.
-        </p>
         <div className="packages-grid">
           <div className="packages-users">
             <h3> Cursos para Instituciones Educativas </h3>

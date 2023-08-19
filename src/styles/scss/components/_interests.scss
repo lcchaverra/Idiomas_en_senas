@@ -1,0 +1,8 @@
+.interest-container {
+    background-color: bisque;
+    text-align: center;
+    padding: 2rem;
+    @include rwd(l) {
+        padding: 2rem 8rem;
+    }
+}
