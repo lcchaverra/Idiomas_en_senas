@@ -39,6 +39,7 @@
 .cloud-item {
     width: 100%;
     position: relative;
+    transition: transform .3s;
     & li {
         list-style: none;
         background-color: var(--bg-color);
@@ -48,6 +49,10 @@
         padding: 2rem;
         margin-top: 1rem;
         z-index: 3;
+    }
+    &:hover {
+        cursor: default;
+        transform: translateX(1rem);
     }
 
     & img {

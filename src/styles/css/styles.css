@@ -730,6 +730,7 @@ h3 {
 .cloud-item {
   width: 100%;
   position: relative;
+  transition: transform 0.3s;
 }
 .cloud-item li {
   list-style: none;
@@ -740,6 +741,10 @@ h3 {
   padding: 2rem;
   margin-top: 1rem;
   z-index: 3;
+}
+.cloud-item:hover {
+  cursor: default;
+  transform: translateX(1rem);
 }
 .cloud-item img {
   filter: var(--bg-color2);
