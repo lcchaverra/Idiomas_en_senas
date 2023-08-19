@@ -1,72 +1,83 @@
 import React, {useState} from 'react';
 import Modal from './Modal';
-import GitTest from '../assets/gif/señas1.gif';
 
-const Courses: React.FC = () => {
+interface CourseLevel {
+    level: string;
+    info: string;
+  }
+  
+  interface Course {
+    title: string;
+    gif: string;
+    levels: CourseLevel[];
+  }
+  
+  interface GifCourseProps {
+    courses: Course[];
+  }
+
+const Courses: React.FC<GifCourseProps> = ({courses}) => {
 
     const [showModal, setShowModal] = useState(false);
-    const [selectedGif, setSelectedGif] = useState('');
     const [selectedLevelInfo, setSelectedLevelInfo] = useState('');
-    const [selectedCourse, setSelectedCourse] = useState('');
-    const [courseLevels, setCourseLevels] = useState([
-    { level: 'Básico', info: 'Contenido para nivel básico' },
-    { level: 'Intermedio', info: 'Contenido para nivel intermedio' },
-    { level: 'Avanzado', info: 'Contenido para nivel avanzado' },
-    ]);
-
-    const handleGifClick = (gif: string) => {
-    setSelectedGif(gif);
-    setSelectedCourse('');
-    setShowModal(false);
+    const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
+    const [selectedLevel, setSelectedLevel] = useState<CourseLevel | null>(null);
+  
+    const handleGifClick = (course: Course) => {
+      setSelectedCourse(course);
+      setSelectedLevelInfo('');
+      setSelectedLevel(null);
+      setShowModal(false);
     };
-
-    const handleLevelClick = (level: string, levelInfo: string) => {
-    setSelectedLevelInfo(levelInfo);
-    setSelectedCourse(level);
-    setShowModal(true);
+  
+    const handleLevelClick = (level: CourseLevel) => {
+      setSelectedLevelInfo(level.info);
+      setSelectedLevel(level);
+      setShowModal(true);
     };
-
+  
     const handleCloseModal = () => {
-    setShowModal(false);
-    setSelectedGif('');
-    setSelectedLevelInfo('');
-    setSelectedCourse('');
+      setShowModal(false);
+      setSelectedLevelInfo('');
+      setSelectedCourse(null);
+      setSelectedLevel(null);
     };
-
-
-    
+  
     return (
-    <div className="gif-course-container">
-        <div>
-        <img
-            src={GitTest} // Reemplaza con la ruta de tu gif
-            alt="Gif"
-            onClick={() => handleGifClick(GitTest)} // Reemplaza con la ruta de tu gif
-            className="gif"
-        />
-        {selectedGif && (
-            <div className="course-levels">
-            {courseLevels.map((course, index) => (
-                <div key={index} className="course-level">
-                <h4 onClick={() => handleLevelClick(course.level, course.info)}>
-                    {course.level}
-                </h4>
-                </div>
-            ))}
+      <div className="gif-course-container">
+        {courses.map((course, courseIndex) => (
+          <div key={courseIndex} className="course-container">
+            <h5>{course.title}</h5>
+            <div>
+              <img
+                src={course.gif}
+                alt="Gif"
+                onClick={() => handleGifClick(course)}
+                className="gif"
+              />
             </div>
-        )}
-        </div>
-        {showModal && (
-        <Modal onClose={handleCloseModal}>
+            {selectedCourse === course && (
+              <div className="course-levels">
+                {course.levels.map((level, levelIndex) => (
+                  <div key={levelIndex} className="course-level">
+                    <h4 onClick={() => handleLevelClick(level)}>{level.level}</h4>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
+        {showModal && selectedLevel && (
+          <Modal onClose={handleCloseModal}>
             <h2>Información del curso</h2>
-            {selectedCourse && <p>Nivel: {selectedCourse}</p>}
-            <p>{selectedGif}</p>
+            <p>Nivel: {selectedLevel.level}</p>
             <p>{selectedLevelInfo}</p>
-        </Modal>
+          </Modal>
         )}
-    </div>
+      </div>
     );
-};
+  };
+  
 
 
 export default Courses
