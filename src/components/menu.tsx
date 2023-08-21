@@ -25,22 +25,12 @@ const menu = ({ isMenuOpen }: any) => {
             <a
               className="main-menu__link"
               href="#services"
-              onClick={(event) => scrollToSection(event, "services")}
+              onClick={(event) => scrollToSection(event, "cursos")}
             >
               {" "}
-              Servicios{" "}
+              Cursos{" "}
             </a>{" "}
           </li>
-          {/* <li className="main-menu__item">
-            <a
-              className="main-menu__link"
-              href="#activities"
-              onClick={(event) => scrollToSection(event, "activities")}
-            >
-              {" "}
-              Actividades{" "}
-            </a>{" "}
-          </li> */}
           <li className="main-menu__item">
             <a
               className="main-menu__link"

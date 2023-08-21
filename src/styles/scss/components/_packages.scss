@@ -19,7 +19,7 @@
     gap: 2rem;
     grid-template-columns: repeat(1, 1fr);
     @include rwd(l) {
-        grid-template-columns: repeat(2, 1fr);
+        // grid-template-columns: repeat(2, 1fr);
         
     }
 }
@@ -34,6 +34,10 @@
 .packages-gif-container img {
     width: 80%;
     border-radius: 3rem;
+}
+
+.packages-user-content ul {
+    padding: 0;
 }
 
 .cloud-item {

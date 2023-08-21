@@ -36,8 +36,8 @@ const courses = [
 const NewServices = () => {
   return (
     <>
-    <div className="New-services-section" id="services">
-        <h2>Servicios</h2>
+    <div className="New-services-section" id="cursos">
+        <h2>Cursos</h2>
         <p>Através de la plataforma digital educativa <strong>Idiomas en señas</strong> ofrecemos cursosla Lengua de Señas para personas sordas tanto oyentes. </p>
             <div className="New-services-container">
                 <div className="new-services-item">

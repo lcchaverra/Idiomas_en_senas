@@ -8,7 +8,7 @@ const MultiuserPackages = () => {
         <h2>Paquetes Multiusuarios</h2>
         <div className="packages-grid">
           <div className="packages-users">
-            <h3> Cursos para Instituciones Educativas </h3>
+            <h3> Cursos para Instituciones Educativas y Programas </h3>
             <div className="packages-gif-container">
               <img
                 src={Giftest}
@@ -39,7 +39,8 @@ const MultiuserPackages = () => {
               </ul>
             </div>
           </div>
-          <div className="packages-users">
+
+          {/* <div className="packages-users">
             <h3> Cursos para Programas </h3>
 
             <div className="packages-gif-container">
@@ -56,7 +57,6 @@ const MultiuserPackages = () => {
                   <li>
                     Puedes acceder a los cursos 24/7 en cualquier hora y momento
                   </li>
-                  {/* <img src={CloudImg} alt="Nube de fondo para los beneficios" /> */}
                 </div>
                 <div className="cloud-item">
                   <li>
@@ -72,7 +72,8 @@ const MultiuserPackages = () => {
                 </div>
               </ul>
             </div>
-          </div>
+          </div> */}
+          
         </div>
       </div>
     </>
