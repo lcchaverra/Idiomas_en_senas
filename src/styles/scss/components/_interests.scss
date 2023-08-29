@@ -9,17 +9,19 @@
 
 .interest-grid-container {
     padding: 1.5rem;
-    // display: grid;
-    // grid-template-columns: repeat(1, 1fr);
+    display: flex;
     gap: 2rem;
+    flex-direction: column;
     @include rwd(l){
-        // grid-template-columns: repeat(2, 1fr);
+        flex-direction: row;
     }
 }
 
 .interest-select {
-    padding: 5rem;
-    // background-color: blue;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: var(--bg-color2);
+    color: var(--letter-color);
 }
 
 .interest-item {

@@ -578,10 +578,21 @@ h3 {
 
 .interest-grid-container {
   padding: 1.5rem;
+  display: flex;
   gap: 2rem;
+  flex-direction: column;
 }
+@media screen and (min-width: 960px) {
+  .interest-grid-container {
+    flex-direction: row;
+  }
+}
+
 .interest-select {
-  padding: 5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--bg-color2);
+  color: var(--letter-color);
 }
 
 .interest-item {
