@@ -566,7 +566,7 @@ h3 {
 }
 
 .interest-container {
-  background-color: bisque;
+  color: var(--letter-color);
   text-align: center;
   padding: 2rem;
 }
@@ -574,6 +574,28 @@ h3 {
   .interest-container {
     padding: 2rem 8rem;
   }
+}
+
+.interest-grid-container {
+  padding: 1.5rem;
+  gap: 2rem;
+}
+.interest-select {
+  padding: 5rem;
+}
+
+.interest-item {
+  padding: 1rem;
+}
+
+.interest-note {
+  background-color: var(--bg-color2);
+  padding: 0.3rem;
+  border-radius: 1rem;
+  transition: transform 0.3s;
+}
+.interest-note:hover {
+  transform: translateX(0.3rem);
 }
 
 .activities-container {

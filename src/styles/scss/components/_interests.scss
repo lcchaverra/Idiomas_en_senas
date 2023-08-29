@@ -1,8 +1,39 @@
 .interest-container {
-    background-color: bisque;
+    color: var(--letter-color);
     text-align: center;
     padding: 2rem;
     @include rwd(l) {
         padding: 2rem 8rem;
+    }
+}
+
+.interest-grid-container {
+    padding: 1.5rem;
+    // display: grid;
+    // grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    @include rwd(l){
+        // grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.interest-select {
+    padding: 5rem;
+    // background-color: blue;
+}
+
+.interest-item {
+    // background-color: aqua;
+    padding: 1rem;
+
+}
+
+.interest-note {
+    background-color: var(--bg-color2);
+    padding: .3rem;
+    border-radius: 1rem;
+    transition: transform .3s;
+    &:hover {
+        transform: translateX(.3rem);
     }
 }

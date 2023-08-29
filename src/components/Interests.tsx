@@ -1,63 +1,48 @@
-import React, {useState} from "react";
-import { Bar } from "react-chartjs-2";
+import React, { useState, useRef, useEffect } from "react";
+import MexicoFlag from '../assets/icons/flag.png';
+import ArgentinaFlag from '../assets/icons/argentina.png';
+import FranceFlag from '../assets/icons/france.png';
 
 interface Option {
-    label: string;
-    value: string;
+  label: string;
+  value: string;
+  flag: string;
 }
 
 const options: Option[] = [
-    {label: 'Opcion 1', value: 'Opcion 1'},
-    {label: 'Opcion 2', value: 'Opcion 2'},
-    {label: 'Opcion 3', value: 'Opcion 3'},
-]
+  { label: "Lengua de Señas Francesas", value: "Lengua de Señas Francesas", flag: FranceFlag  },
+  { label: "Lengua de Señas Mexicana", value: "Lengua de Señas Mexicana", flag: MexicoFlag },
+  { label: "Lengua de Señas Argentina", value: "Lengua de Señas Argentina" , flag: ArgentinaFlag },
+];
 
 const Interests: React.FC = () => {
 
-    const [selectedOption, setSelectedOption] = useState<string | null>(null);
-
-    const handleOptionChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        setSelectedOption(event.target.value)
-    }
-
-    const getChartData = () => {
-
-        const data = {
-            labels: options.map(option => option.label),
-            datasets: [
-                {
-                    label: 'Votos',
-                    data: options.map(()=> Math.floor(Math.random()*100)),
-                    backgroundcolor: 'rgba(75,192,192,0.6)',
-                },
-            ],
-        };
-
-        return data;
-    }
-
   return (
     <>
-        <div className="interest-container">
-            <h3>¿Qué idiomas te interesa aprender en la lengua de señas?</h3>
-            <select name="interes" id="interes" onChange={handleOptionChange}>
-                {options.map(option => (
-                    <option key={option.value} value={option.value}>{option.label}</option>
-                ))}
-            </select>
-
-            { selectedOption && (
-                    <div>
-                        <h4>Opcion Escogda: {options.find(option => option.value = selectedOption)?.label} </h4>
-                        <Bar data={getChartData()} />
-                    </div>
-                )
+      <div className="interest-container">
+        <h3>¿Qué idiomas te interesa aprender en la lengua de señas?</h3>
+        <div className="interest-grid-container">
+          <select className="interest-select">
+            {
+              options.map(option => (
+                <option className="interest-item" value={option.value}>{option.label}
+                  <img src={option.flag} alt="Bandera de la opcion a escoger" />
+                </option>
+                ))
             }
-
-            <p>Nuestro objetivo es ampliar los crusos en lengua de señas en otros idiomas</p>
+          </select>
+        <div className="interest-note">
+            <p>La subscripción por persona da la posibilidad de acceder a alguien con escasos recursos que lo necesite.</p>
+            <q>
+              Educate a ti y a alguien que lo necesite
+            </q>
+        </div>
+      </div>
+          <button className="btn">Votar</button>
+          <p>El objetivo es ampliar cupos en la lengua de señas en otros idiomas</p>
         </div>
     </>
-  )
-}
+  );
+};
 
-export default Interests
+export default Interests;
