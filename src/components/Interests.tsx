@@ -1,53 +1,90 @@
-import React, { useState, useRef, useEffect } from "react";
-import MexicoFlag from '../assets/icons/flag.png';
-import ArgentinaFlag from '../assets/icons/argentina.png';
-import FranceFlag from '../assets/icons/france.png';
+import React, { useState, useEffect } from "react";
+import Select from "react-select";
+import MexicoFlag from "../assets/icons/flag.png";
+import ArgentinaFlag from "../assets/icons/argentina.png";
+import FranceFlag from "../assets/icons/france.png";
+import toast, { Toaster } from "react-hot-toast";
 
 interface Option {
-  id: number;
-  label: string;
   value: string;
-  flag: string;
+  label: React.ReactNode;
 }
 
 const options: Option[] = [
-  { id:1 ,label: "Lengua de Señas Francesas", value: "Lengua de Señas Francesas", flag: FranceFlag  },
-  { id:2 ,label: "Lengua de Señas Mexicana", value: "Lengua de Señas Mexicana", flag: MexicoFlag },
-  { id:3 ,label: "Lengua de Señas Argentina", value: "Lengua de Señas Argentina" , flag: ArgentinaFlag },
+  {
+    value: "Lengua de Señas Francesas",
+    label: (
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <img src={FranceFlag} alt="France Flag" style={{ width: "1.3rem",marginRight: "8px" }} />
+        Lengua de Señas Francesas
+      </div>
+    ),
+  },
+  {
+    value: "Lengua de Señas Mexicana",
+    label: (
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <img src={MexicoFlag} alt="Mexico Flag" style={{ width: "1.3rem",marginRight: "8px" }} />
+        Lengua de Señas Mexicana
+      </div>
+    ),
+  },
+  {
+    value: "Lengua de Señas Argentina",
+    label: (
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <img src={ArgentinaFlag} alt="Argentina Flag" style={{ width: "1.3rem",marginRight: "8px" }} />
+        Lengua de Señas Argentina
+      </div>
+    ),
+  },
 ];
 
 const Interests: React.FC = () => {
+  const [selectedOption, setSelectedOption] = useState<Option | null>(null);
 
-  const selectedOptionRef = useRef(null)
+  useEffect(() => {
+    const storedValue = localStorage.getItem("selectedOption");
+    if (storedValue) {
+      setSelectedOption(options.find(option => option.value === storedValue) || null);
+    }
+  }, []);
 
-  const voteHandle: any = () => {
-    console.log("su voto", selectedOptionRef.current)
-  }
+  const voteHandle = () => {
+    if (selectedOption) {
+      localStorage.setItem("selectedOption", selectedOption.value);
+      console.log("Voto registrado:", selectedOption.value);
+      toast.success("Voto Realizado");
+    }
+  };
 
   return (
     <>
+      <div>
+        <Toaster />
+      </div>
       <div className="interest-container">
         <h3>¿Qué idiomas te interesa aprender en la lengua de señas?</h3>
         <div className="interest-grid-container">
-          <select className="interest-select" ref={selectedOptionRef}>
-            {
-              options.map(option => (
-                <option key={option.id} className="interest-item" value={option.value}>{option.label}
-                  {/* <img src={option.flag} alt="Bandera de la opcion a escoger" /> */}
-                </option>
-                ))
-            }
-          </select>
-        <div className="interest-note">
-            <p>La subscripción por persona da la posibilidad de acceder a alguien con escasos recursos que lo necesite.</p>
-            <q>
-              Educate a ti y a alguien que lo necesite
-            </q>
+          <Select
+            className="interest-select"
+            value={selectedOption}
+            onChange={setSelectedOption}
+            options={options}
+          />
+          <div className="interest-note">
+            <p>
+              La subscripción por persona da la posibilidad de acceder a alguien
+              con escasos recursos que lo necesite.
+            </p>
+            <q>Educate a ti y a alguien que lo necesite</q>
+          </div>
         </div>
+        <button className="btn" onClick={voteHandle}>
+          Votar
+        </button>
+        <p>El objetivo es ampliar cupos en la lengua de señas en otros idiomas</p>
       </div>
-          <button className="btn" onClick={voteHandle}>Votar</button>
-          <p>El objetivo es ampliar cupos en la lengua de señas en otros idiomas</p>
-        </div>
     </>
   );
 };

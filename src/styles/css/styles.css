@@ -569,6 +569,7 @@ h3 {
   color: var(--letter-color);
   text-align: center;
   padding: 2rem;
+  border-bottom: 3px dashed var(--bg-color2);
 }
 @media screen and (min-width: 960px) {
   .interest-container {
@@ -578,13 +579,14 @@ h3 {
 
 .interest-grid-container {
   padding: 1.5rem;
-  display: flex;
   gap: 2rem;
-  flex-direction: column;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(1, 1fr);
 }
 @media screen and (min-width: 960px) {
   .interest-grid-container {
-    flex-direction: row;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

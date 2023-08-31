@@ -1,41 +1,41 @@
 .interest-container {
-    color: var(--letter-color);
-    text-align: center;
-    padding: 2rem;
-    @include rwd(l) {
-        padding: 2rem 8rem;
-    }
+  color: var(--letter-color);
+  text-align: center;
+  padding: 2rem;
+  border-bottom: 3px dashed var(--bg-color2);
+  @include rwd(l) {
+    padding: 2rem 8rem;
+  }
 }
 
 .interest-grid-container {
-    padding: 1.5rem;
-    display: flex;
-    gap: 2rem;
-    flex-direction: column;
-    @include rwd(l){
-        flex-direction: row;
-    }
+  padding: 1.5rem;
+  gap: 2rem;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(1, 1fr);
+  @include rwd(l) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .interest-select {
-    padding: 1rem;
-    border-radius: .5rem;
-    background-color: var(--bg-color2);
-    color: var(--letter-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--bg-color2);
+  color: var(--letter-color);
 }
 
 .interest-item {
-    // background-color: aqua;
-    padding: 1rem;
-
+  padding: 1rem;
 }
 
 .interest-note {
-    background-color: var(--bg-color2);
-    padding: .3rem;
-    border-radius: 1rem;
-    transition: transform .3s;
-    &:hover {
-        transform: translateX(.3rem);
-    }
+  background-color: var(--bg-color2);
+  padding: 0.3rem;
+  border-radius: 1rem;
+  transition: transform 0.3s;
+  &:hover {
+    transform: translateX(0.3rem);
+  }
 }
