@@ -1,37 +1,5 @@
 import Courses from "./Courses"
-import GitTest from '../assets/gif/señas1.gif';
-
-const courses = [
-  {
-    title: 'Lengua de Señas Colombiana',
-    gif: GitTest,
-    levels: [
-      { level: 'Básico', info: 'Contenido para nivel 1' },
-      { level: 'Intermedio', info: 'Contenido para nivel 2' },
-      { level: 'Avanzado', info: 'Contenido para nivel 3' },
-    ],
-  },
-  {
-    title: 'Lenga de Señas Americana',
-    gif: GitTest,
-    levels: [
-      { level: 'Básico', info: 'Contenido para nivel A' },
-      { level: 'Intermedio', info: 'Contenido para nivel B' },
-      { level: 'Avanzado', info: 'Contenido para nivel C' },
-    ],
-  },
-
-  {
-    title: 'Capacitacion para aprender la lengua de señas',
-    gif: GitTest,
-    levels: [
-      { level: 'Básico', info: 'Contenido para nivel X' },
-      { level: 'Intermedio', info: 'Contenido para nivel Y' },
-      { level: 'Avanzado', info: 'Contenido para nivel Z' },
-    ],
-  },
-
-];
+import {courses, coursesDeaf} from "../components/CoursesData"
 
 const NewServices = () => {
   return (
@@ -42,7 +10,7 @@ const NewServices = () => {
             <div className="New-services-container">
                 <div className="new-services-item">
                     <h3>Para personas sordas</h3>
-                    <Courses courses={courses}/>
+                    <Courses courses={coursesDeaf}/>
                 </div>
                 <div className="new-services-item">
                     <h3>Para personas Oyentes</h3>

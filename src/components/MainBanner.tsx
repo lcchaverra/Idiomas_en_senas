@@ -18,9 +18,6 @@ const MainBanner = () => {
             </div>
           </div>
           <div className="image-container">
-            {/* <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia enim nisi deserunt autem obcaecati repellendus quaerat expedita, minus repellat labore aut! A eos ullam distinctio facere itaque dignissimos consectetur molestias.
-            </p> */}
             <img
               src={BannerIMG}
               alt="Imagen de baner de presentacion de Idiomas en Señas"

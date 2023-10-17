@@ -16,7 +16,6 @@ const MainPresentationText = () => {
                 <h3>
                     Misión
                 </h3>
-
                 </div>
                 <p>
                     Democratizar la Lengua de Señas para que se vuelva tendencia nacional e internacional. Cerrar brechas, crear equidad e inclusión social, educativa y Laboral para la comunidad Sorda.
