@@ -15,7 +15,7 @@ const MultiuserPackages = () => {
               />
             </div>
             <div className="packages-user-content">
-              <h4> Beneficio </h4>
+              <h3> Beneficio </h3>
               <ul>
                 <div className="cloud-item">
                   <li>

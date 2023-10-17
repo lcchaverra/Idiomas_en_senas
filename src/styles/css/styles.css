@@ -772,6 +772,7 @@ h3 {
   gap: 2rem;
   grid-template-columns: repeat(1, 1fr);
 }
+
 .packages-gif-container {
   padding: 0.5rem;
   display: flex;
@@ -785,7 +786,15 @@ h3 {
 }
 
 .packages-user-content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   padding: 0;
+}
+@media screen and (min-width: 960px) {
+  .packages-user-content ul {
+    flex-direction: row;
+  }
 }
 
 .cloud-item {
@@ -794,10 +803,12 @@ h3 {
   transition: transform 0.3s;
 }
 .cloud-item li {
+  height: 7.5rem;
+  overflow: hidden;
   list-style: none;
   background-color: var(--bg-color);
-  border-radius: 2rem;
-  box-shadow: 3px 3px 3px #CCC;
+  border-radius: 1rem;
+  box-shadow: 1px 3px 5px #CCC;
   position: relative;
   padding: 2rem;
   margin-top: 1rem;
