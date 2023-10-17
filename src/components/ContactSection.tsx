@@ -49,40 +49,41 @@ const ContactSection = () => {
 
         <form ref={formRef} className="contact-form" onSubmit={handleSubmit}>
           <img className="contact-logo" src={LogoSiluet} alt="Logo de idiomas en señas para la sesion de contacto" />
+          <div className="form-body">
           <div className="form-group">
-            <label htmlFor="nombre_usuario">Ingresa tus nombres</label>
+            <label htmlFor="nombre_usuario">Nombre</label>
             <input
               type="text"
               className="form-control"
               name="nombre_usuario"
-              placeholder="Your Name"
+              placeholder="Ingresa tu nombre"
             />
           </div>
           <div className="form-group">
-            <label htmlFor="apellido_usuario">Ingresa tus Apellidos</label>
+            <label htmlFor="apellido_usuario">Apellido</label>
             <input
               type="text"
               className="form-control"
               name="apellido_usuario"
-              placeholder="Your Last Name"
+              placeholder="Ingresa tu Apellido"
             />
           </div>
           <div className="form-group">
-            <label htmlFor="email_usuario">Ingresa tu correo electrónico</label>
+            <label htmlFor="email_usuario">Correo electrónico</label>
             <input
               type="email"
               className="form-control"
               name="email_usuario"
-              placeholder="Your Email"
+              placeholder="Ingresa tu correo electrónico"
             />
           </div>
           <div className="form-group">
-            <label htmlFor="telefono_usuario">Numero de Celular</label>
+            <label htmlFor="telefono_usuario">Celular</label>
             <input
               type="number"
               className="form-control"
               name="telefono_usuario"
-              placeholder="Phone"
+              placeholder="Numero de Celular"
             />
           </div>
           <div className="form-group">
@@ -116,14 +117,15 @@ const ContactSection = () => {
               <option value="Capacitación para aprender la lengua de señas (Oyentes)">Capacitación para aprender la lengua de señas (Oyentes)</option>
             </select>
           </div>
+          <div className="form-group">
           <label htmlFor="Texto">¡Dejanos tu mensaje!</label>
-          <div className="form-floatgrouping">
             <textarea
-              placeholder="Leave a message here"
+              placeholder="Dejanos un mensaje aquí"
               name="Texto"
             ></textarea>
           </div>
           <br />
+          </div>
           <div className="form-group-btn">
             <button className="btn primary" type="submit">
               Enviar Mensaje

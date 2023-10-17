@@ -11,15 +11,28 @@
     }
 }
 
+.contact-logo{
+  width: 15rem;
+}
+
+.form-body {
+  display: grid;
+  grid-template-columns: repeat(2 , 2fr);
+  padding-top: 2rem;
+  gap: 1.2rem;
+}
+
 .contact-form {
-    padding: 1.5rem;
-    background-color: var(--bg-color);
-    border-radius: 5%;
-    width: 100%;
-    @include rwd(l){
-        width: 60%;
-        padding: 5rem;
-    }
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  background-color: var(--bg-color);
+  border-radius: 2%;
+  width: 100%;
+  @include rwd(l){
+    width: 60%;
+    padding: 5rem;
+  }
 }
 
 .form-group {

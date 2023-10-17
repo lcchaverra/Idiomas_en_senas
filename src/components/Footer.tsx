@@ -12,7 +12,7 @@ const Footer = () => {
       </a>
     </div>
     <div className="created-by">
-      <p>Desarrollado por  <strong>: Luis Carlos Chaverra Córdoba </strong> </p>
+      <p>Desarrollado por  <strong>: <a href='https://lu-dev1.netlify.app/' target='_blank'> Luis Carlos Chaverra Córdoba </a></strong> </p>
     </div>
     <div className="inspiring-message">
       <p>"Un paso mas cerca a la inclusión social"
