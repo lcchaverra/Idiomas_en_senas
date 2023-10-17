@@ -12,7 +12,6 @@
   padding: 1.5rem;
   gap: 2rem;
   display: grid;
-  place-items: center;
   grid-template-columns: repeat(1, 1fr);
   @include rwd(l) {
     grid-template-columns: repeat(2, 1fr);
@@ -20,9 +19,9 @@
 }
 
 .interest-select {
+  flex: 1;
   padding: 1rem;
   border-radius: 0.5rem;
-  background-color: var(--bg-color2);
   color: var(--letter-color);
 }
 
@@ -31,11 +30,31 @@
 }
 
 .interest-note {
-  background-color: var(--bg-color2);
   padding: 0.3rem;
   border-radius: 1rem;
   transition: transform 0.3s;
   &:hover {
     transform: translateX(0.3rem);
+  }
+}
+
+.interest-title{ 
+  color: #113882;
+  font-weight: 700;
+}
+
+.interest-select-votation-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.interest-grid-item {
+  padding: 0 5rem;
+  text-align: justify;
+}
+
+@include rwd(l){
+  .content-line {
+    border-right: 2px solid #CCCC;
   }
 }

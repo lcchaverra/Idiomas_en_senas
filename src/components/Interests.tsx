@@ -64,26 +64,32 @@ const Interests: React.FC = () => {
         <Toaster />
       </div>
       <div className="interest-container">
-        <h3>¿Qué idiomas te interesa aprender en la lengua de señas?</h3>
+        <h3 className="interest-title">¿Quieres Aprender Más?</h3>
         <div className="interest-grid-container">
-          <Select
-            className="interest-select"
-            value={selectedOption}
-            onChange={setSelectedOption}
-            options={options}
-          />
-          <div className="interest-note">
-            <p>
-              La subscripción por persona da la posibilidad de acceder a alguien
-              con escasos recursos que lo necesite.
-            </p>
-            <q>Educate a ti y a alguien que lo necesite</q>
+          <div className="interest-grid-item content-line">
+            <h4>¿Qué idioma te interesa aprender en la lengua de señas?</h4>
+            <p>Con tu voto descubriremos cuál podría ser el siguiente idioma que agregemos a nuestros cursos.</p>
+            <div className="interest-select-votation-container">
+            <Select
+              className="interest-select"
+              value={selectedOption}
+              onChange={setSelectedOption}
+              options={options}
+            />
+          <button className="btn" onClick={voteHandle}>Votar</button>
+            </div>
+          </div>
+          <div className="interest-grid-item">
+            <div className="interest-note">
+              <h4>¿Sabías que...?</h4>
+              <p>
+                La subscripción por persona da la posibilidad de acceder a alguien
+                con escasos recursos que lo necesite.
+              </p>
+              <span>Educate a ti y a alguien que lo necesite</span>
+            </div>
           </div>
         </div>
-        <button className="btn" onClick={voteHandle}>
-          Votar
-        </button>
-        <p>El objetivo es ampliar cupos en la lengua de señas en otros idiomas</p>
       </div>
     </>
   );
