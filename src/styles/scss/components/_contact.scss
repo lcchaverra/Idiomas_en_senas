@@ -17,9 +17,11 @@
 
 .form-body {
   display: grid;
-  grid-template-columns: repeat(2 , 2fr);
   padding-top: 2rem;
   gap: 1.2rem;
+  @include rwd(l) {
+    grid-template-columns: repeat(2 , 2fr);
+  }
 }
 
 .contact-form {

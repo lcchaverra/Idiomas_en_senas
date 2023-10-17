@@ -888,9 +888,13 @@ h3 {
 
 .form-body {
   display: grid;
-  grid-template-columns: repeat(2, 2fr);
   padding-top: 2rem;
   gap: 1.2rem;
+}
+@media screen and (min-width: 960px) {
+  .form-body {
+    grid-template-columns: repeat(2, 2fr);
+  }
 }
 
 .contact-form {
