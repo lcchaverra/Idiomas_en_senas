@@ -6,7 +6,7 @@ const ImageSections = () => {
   return (
     <>
       <div className="gallery-container" id="gallery">
-        <h3 className="">Galeria de Imagenes</h3>
+        <h3 className="">Galería de Imagenes</h3>
         <p>
           Estos son los rostros de personas sordas y oyentes que anhelan
           oportunidades, anhelan inclusión y quieren aprender a comunicarse en

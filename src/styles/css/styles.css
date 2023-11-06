@@ -521,6 +521,8 @@ h3 {
 
 .gif {
   max-width: 100%;
+  width: 25rem;
+  height: 14rem;
   cursor: pointer;
   transition: transform 0.3s;
   border-radius: 1rem;
@@ -565,6 +567,7 @@ h3 {
 }
 
 .interest-container {
+  width: 100%;
   color: var(--letter-color);
   text-align: center;
   padding: 2rem;
@@ -608,6 +611,12 @@ h3 {
   transform: translateX(0.3rem);
 }
 
+.video-weeks {
+  width: 100%;
+  height: 20rem;
+  border-radius: 2rem;
+}
+
 .interest-title {
   color: #113882;
   font-weight: 700;
@@ -619,8 +628,13 @@ h3 {
 }
 
 .interest-grid-item {
-  padding: 0 5rem;
+  padding: 0;
   text-align: justify;
+}
+@media screen and (min-width: 960px) {
+  .interest-grid-item {
+    padding: 0 5rem;
+  }
 }
 
 @media screen and (min-width: 960px) {

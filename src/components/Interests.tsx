@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Select from "react-select";
 import MexicoFlag from "../assets/icons/flag.png";
 import ArgentinaFlag from "../assets/icons/argentina.png";
-import FranceFlag from "../assets/icons/france.png";
+import PortugalFlag from "../assets/icons/portugal.png";
 import toast, { Toaster } from "react-hot-toast";
-
+import WeeksVideo from "../assets/videos/semanas.mp4";
 interface Option {
   value: string;
   label: React.ReactNode;
@@ -12,11 +12,11 @@ interface Option {
 
 const options: Option[] = [
   {
-    value: "Lengua de Señas Francesas",
+    value: "Lengua de Señas Portuguesa",
     label: (
       <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <img src={FranceFlag} alt="France Flag" style={{ width: "1.3rem",marginRight: "8px" }} />
-        Lengua de Señas Francesas
+        <img src={PortugalFlag} alt="France Flag" style={{ width: "1.3rem",marginRight: "8px" }} />
+        Lengua de Señas Portuguesa
       </div>
     ),
   },
@@ -48,6 +48,9 @@ const Interests: React.FC = () => {
     if (storedValue) {
       setSelectedOption(options.find(option => option.value === storedValue) || null);
     }
+    if (weekVideoRef.current) {
+      weekVideoRef.current.playbackRate = 0.9;
+    }
   }, []);
 
   const voteHandle = () => {
@@ -57,6 +60,8 @@ const Interests: React.FC = () => {
       toast.success("Voto Realizado");
     }
   };
+
+  const weekVideoRef = useRef<HTMLVideoElement | null>(null)
 
   return (
     <>
@@ -80,6 +85,18 @@ const Interests: React.FC = () => {
             </div>
           </div>
           <div className="interest-grid-item">
+            <video className="video-weeks"
+            ref={weekVideoRef} 
+            src={WeeksVideo}
+            autoPlay 
+            loop 
+            muted 
+            playsInline={true} 
+            controls
+            ></video>
+          </div>
+        </div>
+
             <div className="interest-note">
               <h4>¿Sabías que...?</h4>
               <p>
@@ -88,8 +105,7 @@ const Interests: React.FC = () => {
               </p>
               <span>Educate a ti y a alguien que lo necesite</span>
             </div>
-          </div>
-        </div>
+
       </div>
     </>
   );

@@ -15,11 +15,12 @@ const Footer = () => {
       <p>Desarrollado por  <strong>: <a href='https://lu-dev1.netlify.app/' target='_blank'> Luis Carlos Chaverra Córdoba </a></strong> </p>
     </div>
     <div className="inspiring-message">
-      <p>"Un paso mas cerca a la inclusión social"
+      <p>"Un paso mas cerca a la inclusión Educativa, Social y Laboral."
       </p>
     </div>
     <div className="contact-info">
       <p>Contacto: lucas.cordoba1510@gmail.com</p>
+      <span>Teléfono: +57 3235145034</span>
     </div>
   </footer>
   )

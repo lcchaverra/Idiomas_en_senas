@@ -99,22 +99,22 @@ const ContactSection = () => {
             <label htmlFor="nivel_usuario">Nivel Escolar</label>
             <select name="nivel_usuario" id="nivel_usuario">
               <option value="Ninguno">Ninguno</option>
-              <option value="Prmaria">Prmaria</option>
+              <option value="Prmaria">Primaria</option>
               <option value="Segundaria">Segundaria</option>
               <option value="Pregrado">Pregrado</option>
               <option value="Educación en casa">Educación en casa</option>
-              <option value="Edcacion Privada">Edcacion Privada</option>
+              <option value="Edcacion Privada">Educación Privada</option>
             </select>
           </div>
           <div className="form-group">
             <label htmlFor="cursoInteres_usuario">Quiero Acceder al curso:</label>
             <select name="cursoInteres_usuario" id="cursoInteres_usuario">
-              <option value="Lengua de Señas Colombiana(Sordos)">Lengua de Señas Colombiana(Sordos)</option>
-              <option value="Lengua de Señas Colombiana(Oyentes)">Lengua de Señas Colombiana(Oyentes)</option>
+              <option value="Lengua de Señas Colombiana">Lengua de Señas Colombiana</option>
               <option value="Lengua de Señas Americana(Sordos)">Lengua de Señas Americana(Sordos)</option>
               <option value="Lengua de Señas Americana(Oyentes)">Lengua de Señas Americana(Oyentes)</option>
-              <option value="Capacitación para aprender la lengua de señas (Sordos)">Capacitación para aprender la lengua de señas (Sordos)</option>
-              <option value="Capacitación para aprender la lengua de señas (Oyentes)">Capacitación para aprender la lengua de señas (Oyentes)</option>
+              <option value="Lengua de Señas Francesa(Oyentes)">Lengua de Señas Francesa(Oyentes)</option>
+              <option value="Lengua de Señas Francesa(Sordos)">Lengua de Señas Francesa(Sordos)</option>
+              <option value="Capacitación para aprender la lengua de señas">Capacitación para aprender la lengua de señas</option>
             </select>
           </div>
           <div className="form-group">

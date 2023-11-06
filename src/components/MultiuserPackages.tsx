@@ -19,19 +19,18 @@ const MultiuserPackages = () => {
               <ul>
                 <div className="cloud-item">
                   <li>
-                    Puedes acceder a los cursos 24/7 en cualquier hora y momento
+                    Puedes acceder a los cursos 24/7 en cualquier hora y momento.
                   </li>
                 </div>
                 <div className="cloud-item">
                   <li>
-                    Puedes practicar y jugar con contenido interactivo de
-                    aceurdo a tu curiosidad
+                  Puedes practicar y jugar con contenido interactivo de acuerdo a tu curiosidad.
                   </li>
                 </div>
                 <div className="cloud-item">
                   <li>
                     Puedes interactuar con personas subscritas en cursos para
-                    practicar lo aprendido desde cualquier parte del mundo
+                    practicar lo aprendido desde cualquier parte del mundo.
                   </li>
                 </div>
               </ul>
