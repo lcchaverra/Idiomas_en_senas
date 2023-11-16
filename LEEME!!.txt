@@ -1,3 +1,5 @@
+Pagina web para el voluntareado de idiomas en señas realizado en rio software 2023.
+
 Link de la pagina en un hosting:
 https://idiomas-en-senas.netlify.app/
 
