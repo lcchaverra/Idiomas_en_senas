@@ -44,6 +44,7 @@ const Courses: React.FC<GifCourseProps> = ({courses}) => {
     };
   
     return (
+      <>
       <div className="gif-course-container">
         {courses.map((course, courseIndex) => (
           <div key={courseIndex} className="course-container">
@@ -54,7 +55,7 @@ const Courses: React.FC<GifCourseProps> = ({courses}) => {
                 alt="Gif"
                 onClick={() => handleGifClick(course)}
                 className="gif"
-              />
+                />
             </div>
             {selectedCourse === course && (
               <div className="course-levels">
@@ -75,6 +76,7 @@ const Courses: React.FC<GifCourseProps> = ({courses}) => {
           </Modal>
         )}
       </div>
+        </>
     );
   };
   

@@ -1,5 +1,5 @@
 import Courses from "./Courses"
-import {courses, coursesDeaf} from "../components/CoursesData"
+import {courses, coursesDeaf, coursesSpecial} from "../components/CoursesData"
 
 const NewServices = () => {
   return (
@@ -17,6 +17,9 @@ const NewServices = () => {
                     <Courses courses={courses} />
                 </div>
             </div>
+        <div className="services-special-item">
+            <Courses courses={coursesSpecial} />
+        </div>
     </div>
     </>
   )

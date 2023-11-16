@@ -100,7 +100,7 @@ const Interests: React.FC = () => {
             <div className="interest-note">
               <h4>¿Sabías que...?</h4>
               <p>
-                La subscripción por persona da la posibilidad de acceder a alguien
+                La subscripción por persona da la posibilidad de acceder gratuitamente a alguien
                 con escasos recursos que lo necesite.
               </p>
               <span>Educate a ti y a alguien que lo necesite</span>

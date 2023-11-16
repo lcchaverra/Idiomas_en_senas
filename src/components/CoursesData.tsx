@@ -34,16 +34,6 @@ export const  courses = [
         { level: 'Avanzado', info: 'Contenido para nivel C (Personas Oyentes)' },
       ],
     },
-  
-    {
-      title: 'Capacitacion para aprender la lengua de señas (Personas Oyentes)',
-      gif: GitCapacitacionProfesores,
-      levels: [
-        { level: 'Básico', info: 'Contenido para nivel X (Personas Oyentes)' },
-        { level: 'Intermedio', info: 'Contenido para nivel Y (Personas Oyentes)' },
-        { level: 'Avanzado', info: 'Contenido para nivel Z (Personas Oyentes)' },
-      ],
-    },
   ];
   
   export const coursesDeaf = [
@@ -74,13 +64,16 @@ export const  courses = [
         { level: 'Avanzado', info: 'Contenido para nivel C (Personas Sordas)' },
       ],
     },
+  ];
+
+  export const  coursesSpecial = [
     {
-      title: 'Capacitacion para aprender la lengua de señas (Personas Sordas)',
+      title: 'Capacitacion para aprender la lengua de señas colombiana',
       gif: GitCapacitacionProfesores,
       levels: [
-        { level: 'Básico', info: 'Contenido para nivel X (Personas Sordas)' },
-        { level: 'Intermedio', info: 'Contenido para nivel Y (Personas Sordas)' },
-        { level: 'Avanzado', info: 'Contenido para nivel Z (Personas Sordas)' },
+        { level: 'Básico', info: 'Contenido para nivel X (Personas Oyentes)' },
+        { level: 'Intermedio', info: 'Contenido para nivel Y (Personas Oyentes)' },
+        { level: 'Avanzado', info: 'Contenido para nivel Z (Personas Oyentes)' },
       ],
     },
   ];
